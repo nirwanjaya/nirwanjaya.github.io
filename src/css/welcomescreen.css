@@ -1,0 +1,19 @@
+body{
+    background-image: url('/src/images/homescreen.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;  
+    background-size: cover;
+}
+.auth{
+    margin-top: 50vh;
+
+}
+.btn{
+    width: 100%;
+    height: 7vh;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+}
+.form{
+    margin-top: 20vh;
+}
