@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        
+    <link rel="stylesheet" href="src/css/bootstrap.min.css">
+    <script src="src/js/jquery.min.js"></script>
+    <script src="src/js/popper.min.js"></script>
+    <script src="src/js/bootstrap.min.js"></script>
+
+    <title>Boruto Jump</title>
+    <!-- firebase script -->
+  <!-- <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-firestore.js"></script> -->
+<script>
+    // var firebaseConfig = {
+    //     apiKey: "AIzaSyDb-ySFEOmjcLyNmdZSQt8EyciMnr-oVwk",
+    //     authDomain: "borutoujmp.firebaseapp.com",
+    //     databaseURL: "https://borutoujmp.firebaseio.com",
+    //     projectId: "borutoujmp",
+    //     storageBucket: "borutoujmp.appspot.com",
+    //     messagingSenderId: "813637273069",
+    //     appId: "1:813637273069:web:f28d9259a17cdd59d013e4"
+    // };
+    // Initialize Firebase
+    // firebase.initializeApp(firebaseConfig);
+        $(document).ready(function(){
+            var form_button;
+            $(".form").hide();
+        //     $("#register").click(function(){
+        //         console.log("REGISTER");
+        //         $(".auth" ).fadeOut( "fast", function() {
+        //             // Animation complete.
+        //             $(".form" ).fadeIn( "fast", function() {
+        //             // Animation complete.
+        //             });
+        //             $(".act").html("REGISTER");
+        //             form_button = "REGISTER";
+        //         });
+
+        //     });
+        //     $("#login").click(function(){
+        //         console.log("LOGIN");
+        //         $(".auth" ).fadeOut( "fast", function() {
+        //             // Animation complete.
+        //             $(".form" ).fadeIn( "fast", function() {
+        //             // Animation complete.
+        //             });
+        //             $(".fullname").hide();
+        //             $(".act").html("LOGIN");
+        //             form_button = "LOGIN";
+        //         });
+        //     });
+        //     $(".act").click(function(){
+        //         // alert(form_button);
+        //         if(form_button == "LOGIN"){
+        //             login($("#email").val(),$("#pwd").val());
+        //         }else if(form_button == "REGISTER"){
+        //             register($("#email").val(),$("#pwd").val());
+        //         }
+        //     });
+         });
+        // function setNickname(){
+        //     var user = firebase.auth().currentUser;
+        //     user.updateProfile({
+        //         displayName: $("#fullname").val()
+        //     }).then(function() {
+        //         console.log("Update fullname success");
+        //     }).catch(function(error) {
+        //         console.log("Update fullname failed");
+        //     });
+        // }
+        // function checkauth(){
+        //     firebase.auth().onAuthStateChanged(function(user) {
+        //         if (user) {
+        //             // User is signed in.
+        //             var displayName = user.displayName;
+        //             console.log("DISPLAY NAME : "+displayName);
+        //             var email = user.email;
+        //             var emailVerified = user.emailVerified;
+        //             var photoURL = user.photoURL;
+        //             var isAnonymous = user.isAnonymous;
+        //             var uid = user.uid;
+        //             console.log("UID : "+uid);
+        //             var providerData = user.providerData;
+        //             sessionStorage.setItem('name',displayName);
+        //             sessionStorage.setItem('uid',uid);
+        //             window.location.href="menu.html";
+        //             // ...
+        //         } else {
+        //             console.log("USER NOT FOUND");
+        //             // User is signed out.
+        //             // ...
+        //         }
+        //     });
+        // }
+        // function login(email,password){
+        //     firebase.auth().signInWithEmailAndPassword(email, password).then(function(){
+        //         console.log("LOGIN SUCCESS");
+        //         checkauth();
+        //     }).catch(function(error) {
+        //         console.log("LOGIN FAILED");
+        //         // Handle Errors here.
+        //         var errorCode = error.code;
+        //         var errorMessage = error.message;
+        //         alert(errorMessage);
+        //         // ...
+        //     });
+        // }
+        // function register(email,password){
+        //     firebase.auth().createUserWithEmailAndPassword(email, password).then(function(){
+        //         console.log("REGISTER SUCCESS")
+        //         login(email,password);
+        //         setNickname();
+        //     }).catch(function(error) {
+        //         // Handle Errors here.
+        //         console.log("REGISTER FAILED");
+        //         var errorCode = error.code;
+        //         var errorMessage = error.message;
+        //         alert(errorMessage);
+        //         // ...
+        //     });
+        // }
+    </script>
+  </head>
+  <body>
+      <div class="container">
+        <div class="auth">
+            <button class="btn btn-primary" id="register">REGISTER</button><br>
+            <button class="btn btn-primary" id="login">LOGIN</button>
+        </div>
+        <div class="form">
+            <div class="form-group fullname">
+                <label for="exampleInputEmail1">Full Name</label>
+                <input type="text" class="form-control" id="fullname" aria-describedby="emailHelp" placeholder="Enter name">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Email address</label>
+                <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Password</label>
+                <input type="password" class="form-control" id="pwd" placeholder="Password">
+            </div>
+            <button class="btn btn-primary act"></button>
+        </div>
+      </div>
+  </body>
+</html>
