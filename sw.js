@@ -11,7 +11,10 @@ self.addEventListener('install', function(event) {
           '/src/js/app.js',
           '/src/js/jquery.min.js',
           '/src/js/popper.min.js',
-          '/src/js/bootstrap.min.js'
+          '/src/js/bootstrap.min.js',
+          '/src/images/homescreen.png',
+          '/src/images/char1.gif',
+          '/src/images/char2.gif'
         ])
       })
   );
