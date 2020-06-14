@@ -15,6 +15,7 @@ self.addEventListener('install', function(event) {
           '/src/js/popper.min.js',
           '/src/js/bootstrap.min.js',
           '/src/images/homescreen.png',
+          '/src/images/icons/icon-144x144.png',
           '/src/images/char1.gif',
           '/src/images/char2.gif'
         ])
