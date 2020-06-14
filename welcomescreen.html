@@ -24,7 +24,7 @@
       // Stash the event so it can be triggered later.
       deferredPrompt = e;
     });
-
+    btnAdd = document.getElementById("btnadd");
     // Installation must be done by a user gesture! Here, the button click
     btnAdd.addEventListener('click', (e) => {
       // hide our user interface that shows our A2HS button
@@ -176,6 +176,7 @@
             </div>
             <button class="btn btn-primary act"></button>
         </div>
+        <button id='btnadd'>add to home</button>
       </div>
   </body>
 </html>
