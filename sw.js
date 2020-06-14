@@ -8,6 +8,7 @@ self.addEventListener('install', function(event) {
           '/welcomescreen.html',
           '/src/css/app.css',
           '/src/css/bootstrap.min.css',
+          '/src/css/welcomescreen.css',
           '/src/js/app.js',
           '/src/js/jquery.min.js',
           '/src/js/popper.min.js',
