@@ -16,16 +16,12 @@
   <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-auth.js"></script>
   <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-firestore.js"></script> -->
 <script>
-let deferredPrompt;
-
-window.addEventListener('beforeinstallprompt', (e) => {
-  console.log("VFRIN");
-  // Prevent the mini-infobar from appearing on mobile
-  e.preventDefault();
-  // Stash the event so it can be triggered later.
-  deferredPrompt = e;
-  // Update UI notify the user they can install the PWA
-  showInstallPromotion();
+window.addEventListener("beforeinstallprompt", function(e) { 
+  // log the platforms provided as options in an install prompt 
+  console.log(e.platforms); // e.g., ["web", "android", "windows"] 
+  e.userChoice.then(function(choiceResult) { 
+    console.log(choiceResult.outcome); // either "accepted" or "dismissed"
+  }, handleError); 
 });
     // var firebaseConfig = {
     //     apiKey: "AIzaSyDb-ySFEOmjcLyNmdZSQt8EyciMnr-oVwk",
