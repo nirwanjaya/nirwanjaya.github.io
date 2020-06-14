@@ -16,13 +16,16 @@
   <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-auth.js"></script>
   <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-firestore.js"></script> -->
 <script>
-      var deferredPrompt;
-      window.addEventListener('beforeinstallprompt', function(event) {
-        console.log('beforeinstallprompt fired');
-        event.preventDefault();
-        deferredPrompt = event;
-        return false;
-      });
+let deferredPrompt;
+
+window.addEventListener('beforeinstallprompt', (e) => {
+  // Prevent the mini-infobar from appearing on mobile
+  e.preventDefault();
+  // Stash the event so it can be triggered later.
+  deferredPrompt = e;
+  // Update UI notify the user they can install the PWA
+  showInstallPromotion();
+});
     // var firebaseConfig = {
     //     apiKey: "AIzaSyDb-ySFEOmjcLyNmdZSQt8EyciMnr-oVwk",
     //     authDomain: "borutoujmp.firebaseapp.com",
