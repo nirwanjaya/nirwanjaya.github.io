@@ -10,13 +10,19 @@
     <script src="/src/js/jquery.min.js"></script>
     <script src="/src/js/popper.min.js"></script>
     <script src="/src/js/bootstrap.min.js"></script>
-    
     <title>Boruto Jump</title>
     <!-- firebase script -->
   <!-- <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-auth.js"></script>
   <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-firestore.js"></script> -->
 <script>
+      var deferredPrompt;
+      window.addEventListener('beforeinstallprompt', function(event) {
+        console.log('beforeinstallprompt fired');
+        event.preventDefault();
+        deferredPrompt = event;
+        return false;
+      });
     // var firebaseConfig = {
     //     apiKey: "AIzaSyDb-ySFEOmjcLyNmdZSQt8EyciMnr-oVwk",
     //     authDomain: "borutoujmp.firebaseapp.com",
